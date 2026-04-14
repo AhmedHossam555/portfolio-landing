@@ -35,7 +35,7 @@ A modern, fully responsive portfolio website showcasing articles, gallery, servi
 ---
 
 ## 📸 Screenshots
-
+[portfolio-landing](images/screen/portfolio-website.png)
 
 ### Landing Page
 
