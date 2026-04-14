@@ -9,20 +9,18 @@
 
 "use strict";
 
-  (function() {
-    const btn = document.querySelector('.scroll-to-top');
-    if (!btn) return;
-    window.addEventListener('scroll', () => {
-      btn.classList.toggle('scroll-to-top--visible', window.scrollY > 300);
-    });
-    btn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  })();
+(function () {
+  const btn = document.querySelector(".scroll-to-top");
+  if (!btn) return;
+  window.addEventListener("scroll", () => {
+    btn.classList.toggle("scroll-to-top--visible", window.scrollY > 300);
+  });
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
 
-/* ═══════════════════════════════════════════════════
-   1. STAT COUNTER  (IntersectionObserver)
-═══════════════════════════════════════════════════ */
+// ─── STAT COUNTER ─────────────────────────────────────────────────────────
 (function initStatCounter() {
   const statsSection = document.querySelector(".stats");
   if (!statsSection) return;
@@ -62,9 +60,7 @@
   observer.observe(statsSection);
 })();
 
-/* ═══════════════════════════════════════════════════
-   2. SKILL BARS  (IntersectionObserver)
-═══════════════════════════════════════════════════ */
+// ─── SKILL BARS ───────────────────────────────────────────────────────────
 (function initSkillBars() {
   const skillsSection = document.querySelector(".our-skills");
   if (!skillsSection) return;
@@ -88,11 +84,9 @@
   observer.observe(skillsSection);
 })();
 
-/* ═══════════════════════════════════════════════════
-   3. COUNTDOWN TIMER
-═══════════════════════════════════════════════════ */
+// ─── COUNTDOWN TIMER ──────────────────────────────────────────────────────
 (function initCountdown() {
-  const targetDate = new Date("Dec 31 2025 23:59:59");
+  const targetDate = new Date("Dec 31 2028 23:59:59").getTime();
 
   const daysEl = document.querySelector(".countdown__value--days");
   const hoursEl = document.querySelector(".countdown__value--hours");
@@ -105,6 +99,8 @@
     return n < 10 ? `0${n}` : String(n);
   }
 
+  let timer; // ✅ FIX: declare first
+
   function tick() {
     const diff = targetDate - Date.now();
 
@@ -113,6 +109,7 @@
       hoursEl.textContent = "00";
       minutesEl.textContent = "00";
       secondsEl.textContent = "00";
+
       clearInterval(timer);
       return;
     }
@@ -128,12 +125,10 @@
   }
 
   tick();
-  const timer = setInterval(tick, 1000);
+  timer = setInterval(tick, 1000);
 })();
 
-/* ═══════════════════════════════════════════════════
-   4. VIDEO LIST – PREVIEW SWITCHER
-═══════════════════════════════════════════════════ */
+// ─── VIDEO LIST – PREVIEW SWITCHER ────────────────────────────────────────
 (function initVideoPreview() {
   const items = document.querySelectorAll(".top-videos__item");
   const preview = document.querySelector(".top-videos__preview-image");
@@ -153,9 +148,7 @@
   });
 })();
 
-/* ═══════════════════════════════════════════════════
-   5. MEGA MENU – KEYBOARD ACCESSIBILITY
-═══════════════════════════════════════════════════ */
+// ─── MEGA MENU – KEYBOARD ACCESSIBILITY ───────────────────────────────────
 (function initMegaMenu() {
   const trigger = document.querySelector(".nav__item--has-mega > .nav__link");
   const megaMenu = document.querySelector(".mega-menu");
@@ -182,5 +175,3 @@
     }
   });
 })();
-
-
