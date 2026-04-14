@@ -7,7 +7,7 @@ A modern, fully responsive portfolio website showcasing articles, gallery, servi
 ## 📋 Table of Contents
 
 - [Features](#features)
-- [Screenshots](#screenshots)
+- [Project Preview](#Project-Preview)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
@@ -34,8 +34,8 @@ A modern, fully responsive portfolio website showcasing articles, gallery, servi
 
 ---
 
-## 📸 Screenshots
-[portfolio-landing](images/screen/portfolio-website.png)
+## 📸 Project Preview
+![Portfolio Landing Page](images/screen/portfolio-website.png)
 
 ### Landing Page
 
