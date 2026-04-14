@@ -1734,3 +1734,112 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════
+   SCROLL TO TOP BUTTON
+═══════════════════════════════════════════════════ */
+.scroll-to-top {
+  position: fixed;
+  inset-block-end: 20px;
+  inset-inline-end: 20px;
+
+  width: 52px;
+  height: 52px;
+
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-alt));
+  color: #fff;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  font-size: 1.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+
+  z-index: 999;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Visible state with pop-in animation */
+.scroll-to-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  animation: popIn 0.4s ease forwards;
+}
+
+/* Hover interaction */
+.scroll-to-top:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle floating effect */
+.scroll-to-top--visible {
+  animation: popIn 0.4s ease forwards, float 3s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Ripple glow effect */
+.scroll-to-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
+
+.scroll-to-top:hover::before {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top,
+  .scroll-to-top--visible {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .scroll-to-top:hover {
+    transform: none;
+  }
+}
