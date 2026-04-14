@@ -1,831 +1,1932 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>template_3</title>
-    <!-- normalize css file -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- font Awesome -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700;1,800&family=Ubuntu:ital@1&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap" rel="stylesheet">
+  <head>
+    <!-- ───────── BASIC META ───────── -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- 
-</head>
-<body>
-    <!-- start header -->
-    <header>
-        <div class="container">
-            <a href="#" class="logo">Ahmed</a>
-                <ul class="main-nav">
-                    <li><a href="#Articles">Articles</a></li>
-                    <li><a href="#Gallery">Gallery</a></li>
-                    <li><a href="#Features">Features</a></li>
-                    <li><a href="#">Other Links</a>
-                    <!-- start Mega menu -->
-                    <div class="mega-menu">
-                        <div class="image"><img src="image/megamenu.png" alt=""></div>
-                        <ul class="links">
-                            <li>
-                              <a href="#testimonials"><i class="far fa-comments fa-fw"></i> Testimonials</a>
-                            </li>
-                            <li>
-                              <a href="#team"><i class="far fa-user fa-fw"></i> Team Members</a>
-                            </li>
-                            <li>
-                              <a href="#services"><i class="far fa-building fa-fw"></i> Services</a>
-                            </li>
-                            <li>
-                              <a href="#our-skills"><i class="far fa-check-circle fa-fw"></i> Our Skills</a>
-                            </li>
-                            <li>
-                              <a href="#work-steps"><i class="far fa-clipboard fa-fw"></i> How It Works</a>
-                            </li>
-                          </ul>
-                          <ul class="links">
-                            <li>
-                              <a href="#events"><i class="far fa-calendar-alt fa-fw"></i> Events</a>
-                            </li>
-                            <li>
-                              <a href="#pricing"><i class="fas fa-server fa-fw"></i> Pricing Plans</a>
-                            </li>
-                            <li>
-                              <a href="#video"><i class="far fa-play-circle fa-fw"></i> Top Videos</a>
-                            </li>
-                            <li>
-                              <a href="#stats"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
-                            </li>
-                            <li>
-                              <a href="#discount"><i class="fas fa-percent fa-fw"></i> Request A Discount</a>
-                            </li>
-                          </ul>
-                    </div>
-                   
-                    <!-- end Mega menu -->
-                    </li>
-                   
+    <title>Ahmed | Web Developer – Articles, Gallery & More</title>
+    <meta
+      name="description"
+      content="Ahmed's personal website – articles, gallery, services, team and more. Books, games, stories and events."
+    />
+    <meta
+      name="keywords"
+      content="Ahmed, web developer, portfolio, articles, gallery, services"
+    />
+    <meta name="author" content="Ahmed" />
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2196f3" />
+
+    <!-- ───────── OPEN GRAPH ───────── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ahmed | Web Developer" />
+    <meta
+      property="og:description"
+      content="Ahmed's personal website – articles, gallery, services, team and more."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/images/preview.jpg"
+    />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:site_name" content="Ahmed" />
+
+    <!-- ───────── TWITTER CARD ───────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ahmed | Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Ahmed's personal website – articles, gallery, services, team and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.com/images/preview.jpg"
+    />
+
+    <!-- ───────── FAVICON ───────── -->
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- ───────── PERFORMANCE ───────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;800&family=Open+Sans:wght@300;400;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap"
+    />
+
+    <!-- ───────── STYLES ───────── -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;800&family=Open+Sans:wght@300;400;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- ───────── STRUCTURED DATA (JSON-LD) ───────── -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmed",
+        "url": "https://yourdomain.com/",
+        "sameAs": [
+          "https://facebook.com/",
+          "https://twitter.com/",
+          "https://youtube.com/"
+        ],
+        "jobTitle": "Web Developer"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <a href="#" class="site-header__logo" aria-label="Ahmed – Home"
+          >Ahmed</a
+        >
+
+        <button
+          class="site-header__nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav
+          id="main-nav"
+          class="site-header__nav"
+          aria-label="Main navigation"
+        >
+          <ul class="nav__list" role="list">
+            <li class="nav__item">
+              <a class="nav__link" href="#articles">Articles</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#features">Features</a>
+            </li>
+
+            <!-- Mega-menu trigger -->
+            <li class="nav__item nav__item--has-mega">
+              <a
+                class="nav__link"
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Other Links</a
+              >
+
+              <div
+                class="mega-menu"
+                role="region"
+                aria-label="Extended navigation"
+              >
+                <div class="mega-menu__image" aria-hidden="true">
+                  <img
+                    src="images/nav/megamenu.png"
+                    alt="megamenu image"
+                    width="300"
+                    height="200"
+                    loading="lazy"
+                  />
+                </div>
+
+                <ul class="mega-menu__links" role="list">
+                  <li>
+                    <a href="#testimonials"
+                      ><i class="far fa-comments fa-fw" aria-hidden="true"></i>
+                      Testimonials</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#team"
+                      ><i class="far fa-user fa-fw" aria-hidden="true"></i> Team
+                      Members</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#services"
+                      ><i class="far fa-building fa-fw" ></i>
+                      Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#our-skills"
+                      ><i
+                        class="far fa-check-circle fa-fw"
+                        aria-hidden="true"
+                      ></i>
+                      Our Skills</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#work-steps"
+                      ><i class="far fa-clipboard fa-fw" aria-hidden="true"></i>
+                      How It Works</a
+                    >
+                  </li>
                 </ul>
-        </div>
-    </header>
-   
-    <!-- end header -->
-    <!-- start landing -->
-    <div class="landing">
-        <div class="container">
-            <div class="text">
-                <h1>welcome, to ahmed world</h1>
-                <p>Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events </p>
-            </div>
-    
-                <img src="image/about-artex.png" alt="">
-          
-           
-            <a href="#articles" class="go-down">
-                <i class="fas fa-angle-double-down fa-2x"></i>
-            </a>
-        </div>
-    </div>
-    <!-- end landing -->
-    <!-- start articles-->
-    <div class="articles" id="Articles">
-        <h2 class="main-title">articles</h2>
-        <div class="container">
-          <div class="box">
-            <img src="image/cat-01.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/cat-02.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/cat-03.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/cat-04.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/cat-05.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/cat-06.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/cat-07.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/cat-08.jpg" alt="">
-            <div class="content">
-              <h3>test title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit!</p>
-            </div>
-            <div class="info">
-              <a href="#">Read More</a>
-              <i class="fas fa-long-arrow-alt-right"></i>
-            </div>
-          </div>
-        </div>
-   
-    </div>
 
-    <!-- end articles -->
-    <!-- start gallery -->
-    <div class="spikes"></div>
-    <div class="gallery" id="Gallery">
-      <h2 class="main-title">gallery</h2>
-      <div class="container">
-        <div class="box">
-          <div class="image">
-            <img src="image/gallery-01.png" alt="">
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="image/gallery-02.png" alt="">
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="image/gallery-03.jpg" alt="">
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="image/gallery-04.png" alt="">
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="image/gallery-05.jpg" alt="">
-          </div>
-        </div>
-        <div class="box">
-          <div class="image">
-            <img src="image/gallery-06.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end gallery -->
-    <!-- ++++++++++++++++++ -->
-    <!-- start feature -->
-    <div class="features" id="Features">
-      <h2 class="main-title">features</h2>
-      <div class="container">
-        <div class="box quality">
-          <div class="image ">  <img src="image/features-01.jpg" alt=""></div>
-        
-            <h1>Quality</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
-            <a href="#">more</a>
-         
-        </div>
-        <div class="box time">
-          <div class="image"><img src="image/features-02.jpg" alt=""></div>
-        
-            <h1>Time</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
-            <a href="#">more</a>
-          
-        </div>
-        <div class="box passion">
-          <div class="image"><img src="image/features-03.jpg" alt=""></div>
-         
-            <h1>Passion</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
-            <a href="#">more</a>
-         
-        </div>
-      </div>
-      </div>
-    <!-- end features -->
-    <!-- start testimonials -->
-    <div class="testimonials" id="testimonials">
-      <h2 class="main-title">testimonials</h2>
-      <div class="container">
-        <div class="card">
-          <img src="image/avatar-01.png" alt="">
-            <h3>Mohamed Farag</h3>
-            <span>Full Stack Developer</span> 
-            <div class="rate">
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Maiores et reiciendis voluptatum, amet est natus quaerat ducimus</p>
-        </div>
-        <div class="card">
-          <img src="image/avatar-02.png" alt="">
-            <h3>Mohamed Ibrahim</h3>
-            <span>Full Stack Developer</span>
-            <div class="rate">
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Maiores et reiciendis voluptatum, amet est natus quaerat ducimus</p>
-        </div>
-        <div class="card">
-          <img src="image/avatar-03.png" alt="">
-            <h3>Shady Nabil</h3>
-            <span>Full Stack Developer</span>
-            <div class="rate">
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Maiores et reiciendis voluptatum, amet est natus quaerat ducimus</p>
-        </div>
-        <div class="card">
-          <img src="image/avatar-04.png" alt="">
-            <h3>Amr Hendawy</h3>
-            <span>Full Stack Developer</span>
-            <div class="rate">
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Maiores et reiciendis voluptatum, amet est natus quaerat ducimus</p>
-        </div>
-        <div class="card">
-         <img src="image/avatar-05.png" alt="">
-            <h3>Sherief Ashraf</h3>
-            <span>Full Stack Developer</span>
-            <div class="rate">
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Maiores et reiciendis voluptatum, amet est natus quaerat ducimus</p>
-        </div>
-        <div class="card">
-          <img src="image/avatar-06.png" alt="">
-            <h3>Osama Mohamed</h3>
-            <span>Full Stack Developer</span>
-            <div class="rate">
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="filled fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Maiores et reiciendis voluptatum, amet est natus quaerat ducimus</p>
-        </div>
-      </div>
-    </div>
-    <!-- end testimonials -->
-    <!-- start team member -->
-    <div class="team" id="team">
-      <h2 class="main-title">
-        team members
-      </h2>
-      <div class="container">
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-01.jpg" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-           
-          </div> 
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div> 
-        </div>
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-02.jpg" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>  
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div>
-        </div>
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-03.jpg" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>  
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div>
-        </div>
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-04.jpg" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-           
-          </div>  
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div>
-        </div>
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-05.png" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        
-          </div>  
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div>
-        </div>
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-06.png" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-         
-          </div>  
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div>
-        </div>
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-07.jpg" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-            
-          </div>  
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div>
-        </div>
-        <div class="box">   
-          <div class="data">
-            <img src="image/team-08.jpg" alt="">
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>  
-          <div class="info">
-            <h3>Name</h3>
-            <p>Simple Short Description</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end team member -->
-    <!-- start services -->
-    <div class="spikes"></div>
-    <div class="services" id="services">
-     
-      <h2 class="main-title">services</h2>
-      <div class="container">
-        <div class="box">
-            <i class="fas fa-user-shield fa-4x"></i>
-            <h3>Security</h3>
-          <div class="info">
-            <a href="#">Details</a>
-          </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-tools fa-4x"></i>
-            <h3>Fixing Issues</h3>
-          <div class="info">
-            <a href="#">Details</a>
-          </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-map-marked-alt fa-4x"></i>
-            <h3>Location</h3>
-          <div class="info">
-            <a href="#">Details</a>
-          </div>
-        </div>
-        <div class="box">
-          <i class="fas fa-laptop-code fa-4x"></i>
-          <h3>Coding</h3>
-          <div class="info">
-            <a href="#">Details</a>
-          </div>
-        </div>
-        <div class="box">
-          <i class="fas fa-palette fa-4x"></i>
-          <h3>Security</h3>
-          <div class="info">
-            <a href="#">Design</a>
-          </div>
-        </div>
-        <div class="box">
-          <i class="fas fa-bullhorn fa-4x"></i>
-          <h3>Marketing</h3>
-          <div class="info">
-            <a href="#">Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end services -->
-    <!-- start skills -->
-    <div class="our-skills" id="our-skills">
-      <h2 class="main-title">OUR SKILLS</h2>
-      <div class="container">
-        <img src="image/skills.png" alt="">
-        <div class="skills">
-          <div class="skill">
-            <h3>HTML <span>80%</span></h3>
-            <div class="progress-skills">
-              <span style="width: 0;" data-width="80%"></span>
-            </div>
-          </div>
-          <div class="skill">
-            <h3>CSS <span>85%</span></h3>
-            <div class="progress-skills">
-              <span style="width: 0;" data-width="85%"></span>
-            </div>
-          </div>
-          <div class="skill">
-            <h3>JavaScript<span>70%</span></h3>
-            <div class="progress-skills">
-              <span style="width: 0;" data-width="70%"></span>
-            </div>
-          </div>
-          <div class="skill">
-            <h3>Python <span>80%</span></h3>
-            <div class="progress-skills">
-              <span style="width: 0;" data-width="80%"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end skills -->
-    <!-- start work-steps -->
-    <div class="work" id="work-steps">
-      <h2 class="main-title">HOW IT WORKS ?</h2>
-      <div class="container">
-        <img class="image" src="image/work-steps.png" alt="">
-        <div class="info">
-          <div class="box">
-            <img src="image/work-steps-1.png" alt="">
-            <div class="text">
-              <h3>Business Analysis</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel</p>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/work-steps-2.png" alt="">
-            <div class="text">
-              <h3>Architecture</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel</p>
-            </div>
-          </div>
-          <div class="box">
-            <img src="image/work-steps-3.png" alt="">
-            <div class="text">
-              <h3> Development </h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end work-steps -->
-    <!-- start Events -->
-    <div class="event" id="events">
-      <h2 class="main-title">latest events</h2>
-      <div class="container">
-     
-          <img src="image/events.png" alt="">
-          <div class="info">
-            <div class="time">
-              <div class="unit"><span class="days">0</span><span>day</span></div>
-              <div class="unit"><span class="hours">0</span><span>Hours</span></div>
-              <div class="unit"><span class="minutes">0</span><span>Minutes</span></div>
-              <div class="unit"><span class="seconds">0</span><span>Seconds</span></div>
-            </div>
-              <h3>Tech Masters Event 2021</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Et vero tenetur doloremque iusto ut adipisci quam ratione aliquam excepturi nulla in harum, veritatis porro</p>
-          </div>
-        <div class="subscribe">
-          <form action="">
-            <input type="email" placeholder="enter your email">
-            <input type="submit" value="subscribe">
-           </form>
-        </div>
-     
-      </div>
-    </div>
-    <!-- end Events -->
-    <!-- start pricing -->
-    <div class="pricing" id="pricing">
-      <h2 class="main-title">PRICING PLANS</h2>
-      <div class="container">
-        <div class="box">
-          <div class="head">
-            <h3>Basic</h3>
-            <img src="image/hosting-basic.png" alt="">
-            <div class="price">
-              <span class="amount">$15</span>
-              <span class="time">Per Month</span>
-            </div>
-          </div>
-         
-          <ul>
-            <li>10GB HDD Space</li>
-            <li>5 Email Addresses</li>
-            <li>2 Subdomains</li>
-            <li>4 Databases</li>
-            <li>Basic Support</li>
+                <ul class="mega-menu__links" role="list">
+                  <li>
+                    <a href="#events"
+                      ><i
+                        class="far fa-calendar-alt fa-fw"
+                        aria-hidden="true"
+                      ></i>
+                      Events</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#pricing"
+                      ><i class="fas fa-server fa-fw" aria-hidden="true"></i>
+                      Pricing Plans</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#videos"
+                      ><i
+                        class="far fa-play-circle fa-fw"
+                        aria-hidden="true"
+                      ></i>
+                      Top Videos</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#stats"
+                      ><i class="far fa-chart-bar fa-fw" aria-hidden="true"></i>
+                      Stats</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#discount"
+                      ><i class="fas fa-percent fa-fw" aria-hidden="true"></i>
+                      Request A Discount</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
-          <a href="#">Choose Plan</a>
-        </div>
-        <div class="box popular">
-          <div class="label">most popular</div>
-          <div class="head">
-            <h3>Advanced</h3>
-          <img src="image/hosting-advanced.png" alt="">
-          <div class="price">
-            <span class="amount">$25</span>
-            <span class="time">Per Month</span>
-          </div>
-          </div>
-          
-          <ul>
-            <li>20GB HDD Space</li>
-            <li>10 Email Addresses</li>
-            <li>5 Subdomains</li>
-            <li>8 Databases</li>
-            <li>Advanced Support</li>
-          </ul>
-          <a href="#">Choose Plan</a>
-        </div>
-        <div class="box">
-          <div class="head">
-            <h3>Professional</h3>
-          <img src="image/hosting-professional.png" alt="">
-          <div class="price">
-            <span class="amount">$45</span>
-            <span class="time">Per Month</span>
-          </div>
-          </div>
-          
-          <ul>
-            <li>50GB HDD Space</li>
-            <li>20 Email Addresses</li>
-            <li>10 Subdomains</li>
-            <li>20 Databases</li>
-            <li>Professional Support</li>
-          </ul>
-          <a href="#">Choose Plan</a>
-        </div>
+        </nav>
       </div>
-    </div>
-    <!-- end pricing -->
-    <!-- start video -->
-    <div class="video" id="videos">
-      <h2 class="main-title">top videos</h2>
-      <div class="container">
-        <div class="holder">
-          <div class="box">
-            <div class="name">
-              Top Videos
-              <i class="fas fa-random"></i>
+    </header>
+    <!-- ═══════════════════════════ /HEADER ═══════════════════════════ -->
+
+    <main id="main-content">
+      <!-- ═══════════════════════════ HERO / LANDING ═══════════════════════════ -->
+      <section class="landing" aria-label="Hero section">
+        <div class="container">
+          <div class="landing__text">
+            <h1 class="landing__heading">Welcome, to Ahmed's World</h1>
+            <p class="landing__desc">
+              Here I'm gonna share everything about my life. Books I'm reading,
+              Games I'm Playing, Stories and Events.
+            </p>
+          </div>
+          <img
+            class="landing__image"
+            src="images/hero/artex-communtiy.png"
+            alt="Ahmed community illustration"
+            width="350"
+            height="350"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <a
+            href="#articles"
+            class="landing__go-down"
+            aria-label="Scroll down to articles"
+          >
+            <i class="fas fa-angle-double-down fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /HERO ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ ARTICLES ═══════════════════════════ -->
+      <section
+        class="articles section"
+        id="articles"
+        aria-labelledby="articles-title"
+      >
+        <h2 class="section__title" id="articles-title">Articles</h2>
+        <div class="container">
+          <ul class="articles__grid" role="list">
+            <!-- Article Card × 8 (representative – repeat pattern) -->
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-1.jpg"
+                alt="Article one cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-2.jpg"
+                alt="Article two cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-3.jpg"
+                alt="Article three cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-4.jpg"
+                alt="Article four cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-5.jpg"
+                alt="Article five cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-6.jpg"
+                alt="Article six cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-7.jpg"
+                alt="Article seven cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+            <li class="article-card">
+              <img
+                class="article-card__image"
+                src="images/articles/void-strike-8.jpg"
+                alt="Article eight cover"
+                width="400"
+                height="250"
+                loading="lazy"
+              />
+              <div class="article-card__content">
+                <h3 class="article-card__title">Test Title</h3>
+                <p class="article-card__excerpt">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit!
+                </p>
+              </div>
+              <div class="article-card__footer">
+                <a class="article-card__link" href="#">Read More</a>
+                <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /ARTICLES ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ GALLERY ═══════════════════════════ -->
+      <div class="spikes" aria-hidden="true"></div>
+      <section
+        class="gallery section section--alt"
+        id="gallery"
+        aria-labelledby="gallery-title"
+      >
+        <h2 class="section__title" id="gallery-title">Gallery</h2>
+        <div class="container">
+          <ul class="gallery__grid" role="list">
+            <li class="gallery__item">
+              <div class="gallery__image-wrap">
+                <img
+                  class="gallery__image"
+                  src="images/gallerys/gallery-laptop-1.png"
+                  alt="Laptop setup"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="gallery__item">
+              <div class="gallery__image-wrap">
+                <img
+                  class="gallery__image"
+                  src="images/gallerys/gallery-website-2.png"
+                  alt="Website design"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="gallery__item">
+              <div class="gallery__image-wrap">
+                <img
+                  class="gallery__image"
+                  src="images/gallerys/gallery-work-3.jpg"
+                  alt="Work environment"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="gallery__item">
+              <div class="gallery__image-wrap">
+                <img
+                  class="gallery__image"
+                  src="images/gallerys/gallery-website-4.png"
+                  alt="Website project"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="gallery__item">
+              <div class="gallery__image-wrap">
+                <img
+                  class="gallery__image"
+                  src="images/gallerys/gallery-communtiy-5.jpg"
+                  alt="Community event"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="gallery__item">
+              <div class="gallery__image-wrap">
+                <img
+                  class="gallery__image"
+                  src="images/gallerys/gallery-webdesign-6.png"
+                  alt="Web design showcase"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /GALLERY ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
+      <section
+        class="features section"
+        id="features"
+        aria-labelledby="features-title"
+      >
+        <h2 class="section__title" id="features-title">Features</h2>
+        <div class="container">
+          <ul class="features__grid" role="list">
+            <li class="feature-card feature-card--quality">
+              <div class="feature-card__image-wrap">
+                <img
+                  class="feature-card__image"
+                  src="images/features/person-work-one.jpg"
+                  alt="Quality work"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="feature-card__title">Quality</h3>
+              <p class="feature-card__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                harum hic veniam eligendi minima
+              </p>
+              <a class="feature-card__link" href="#">More</a>
+            </li>
+            <li class="feature-card feature-card--time">
+              <div class="feature-card__image-wrap">
+                <img
+                  class="feature-card__image"
+                  src="images/features/person-work-two.jpg"
+                  alt="On-time delivery"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="feature-card__title">Time</h3>
+              <p class="feature-card__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                harum hic veniam eligendi minima
+              </p>
+              <a class="feature-card__link" href="#">More</a>
+            </li>
+            <li class="feature-card feature-card--passion">
+              <div class="feature-card__image-wrap">
+                <img
+                  class="feature-card__image"
+                  src="images/features/person-work-three.jpg"
+                  alt="Passionate team"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="feature-card__title">Passion</h3>
+              <p class="feature-card__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                harum hic veniam eligendi minima
+              </p>
+              <a class="feature-card__link" href="#">More</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /FEATURES ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
+      <section
+        class="testimonials section section--alt"
+        id="testimonials"
+        aria-labelledby="testimonials-title"
+      >
+        <h2 class="section__title" id="testimonials-title">Testimonials</h2>
+        <div class="container">
+          <ul class="testimonials__grid" role="list">
+            <li class="testimonial-card">
+              <img
+                class="testimonial-card__avatar"
+                src="images/testimonials/avatar-01.png"
+                alt="Mohamed Farag"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <h3 class="testimonial-card__name">Mohamed Farag</h3>
+              <span class="testimonial-card__role">Full Stack Developer</span>
+              <div
+                class="testimonial-card__rating"
+                role="img"
+                aria-label="4 out of 5 stars"
+              >
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="far fa-star testimonial-card__star"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="testimonial-card__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                et reiciendis voluptatum, amet est natus quaerat ducimus
+              </p>
+            </li>
+
+            <li class="testimonial-card">
+              <img
+                class="testimonial-card__avatar"
+                src="images/testimonials/avatar-02.png"
+                alt="Mohamed Ibrahim"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <h3 class="testimonial-card__name">Mohamed Ibrahim</h3>
+              <span class="testimonial-card__role">Full Stack Developer</span>
+              <div
+                class="testimonial-card__rating"
+                role="img"
+                aria-label="4 out of 5 stars"
+              >
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="far fa-star testimonial-card__star"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="testimonial-card__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                et reiciendis voluptatum, amet est natus quaerat ducimus
+              </p>
+            </li>
+
+            <li class="testimonial-card">
+              <img
+                class="testimonial-card__avatar"
+                src="images/testimonials/avatar-03.png"
+                alt="Shady Nabil"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <h3 class="testimonial-card__name">Shady Nabil</h3>
+              <span class="testimonial-card__role">Full Stack Developer</span>
+              <div
+                class="testimonial-card__rating"
+                role="img"
+                aria-label="4 out of 5 stars"
+              >
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="far fa-star testimonial-card__star"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="testimonial-card__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                et reiciendis voluptatum, amet est natus quaerat ducimus
+              </p>
+            </li>
+
+            <li class="testimonial-card">
+              <img
+                class="testimonial-card__avatar"
+                src="images/testimonials/avatar-04.png"
+                alt="Amr Hendawy"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <h3 class="testimonial-card__name">Amr Hendawy</h3>
+              <span class="testimonial-card__role">Full Stack Developer</span>
+              <div
+                class="testimonial-card__rating"
+                role="img"
+                aria-label="5 out of 5 stars"
+              >
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="testimonial-card__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                et reiciendis voluptatum, amet est natus quaerat ducimus
+              </p>
+            </li>
+
+            <li class="testimonial-card">
+              <img
+                class="testimonial-card__avatar"
+                src="images/testimonials/avatar-05.png"
+                alt="Sherief Ashraf"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <h3 class="testimonial-card__name">Sherief Ashraf</h3>
+              <span class="testimonial-card__role">Full Stack Developer</span>
+              <div
+                class="testimonial-card__rating"
+                role="img"
+                aria-label="3 out of 5 stars"
+              >
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="far fa-star testimonial-card__star"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="far fa-star testimonial-card__star"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="testimonial-card__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                et reiciendis voluptatum, amet est natus quaerat ducimus
+              </p>
+            </li>
+
+            <li class="testimonial-card">
+              <img
+                class="testimonial-card__avatar"
+                src="images/testimonials/avatar-06.png"
+                alt="Osama Mohamed"
+                width="100"
+                height="100"
+                loading="lazy"
+              />
+              <h3 class="testimonial-card__name">Osama Mohamed</h3>
+              <span class="testimonial-card__role">Full Stack Developer</span>
+              <div
+                class="testimonial-card__rating"
+                role="img"
+                aria-label="3 out of 5 stars"
+              >
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="fas fa-star testimonial-card__star testimonial-card__star--filled"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="far fa-star testimonial-card__star"
+                  aria-hidden="true"
+                ></i>
+                <i
+                  class="far fa-star testimonial-card__star"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="testimonial-card__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                et reiciendis voluptatum, amet est natus quaerat ducimus
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /TESTIMONIALS ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ TEAM ═══════════════════════════ -->
+      <section class="team section" id="team" aria-labelledby="team-title">
+        <h2 class="section__title" id="team-title">Team Members</h2>
+        <div class="container">
+          <ul class="team__grid" role="list">
+            <!-- Team Member (pattern × 8) -->
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-01.jpg"
+                  alt="Team member one"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-02.jpg"
+                  alt="Team member two"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-03.jpg"
+                  alt="Team member three"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-04.jpg"
+                  alt="Team member four"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-05.png"
+                  alt="Team member five"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-06.png"
+                  alt="Team member six"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-07.jpg"
+                  alt="Team member seven"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+
+            <li class="team-card">
+              <div class="team-card__data">
+                <img
+                  class="team-card__image"
+                  src="images/teams/team-08.jpg"
+                  alt="Team member eight"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <div class="team-card__social">
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Facebook"
+                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="Twitter"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="team-card__social-link"
+                    aria-label="YouTube"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Name</h3>
+                <p class="team-card__role">Simple Short Description</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /TEAM ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+      <div class="spikes" aria-hidden="true"></div>
+      <section
+        class="services section section--alt"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <h2 class="section__title" id="services-title">Services</h2>
+        <div class="container">
+          <ul class="services__grid" role="list">
+            <li class="service-card">
+              <i
+                class="fas fa-user-shield fa-4x service-card__icon"
+                aria-hidden="true"
+              ></i>
+              <h3 class="service-card__title">Security</h3>
+              <div class="service-card__footer">
+                <a href="#" class="service-card__link">Details</a>
+              </div>
+            </li>
+            <li class="service-card">
+              <i
+                class="fas fa-tools fa-4x service-card__icon"
+                aria-hidden="true"
+              ></i>
+              <h3 class="service-card__title">Fixing Issues</h3>
+              <div class="service-card__footer">
+                <a href="#" class="service-card__link">Details</a>
+              </div>
+            </li>
+            <li class="service-card">
+              <i
+                class="fas fa-map-marked-alt fa-4x service-card__icon"
+                aria-hidden="true"
+              ></i>
+              <h3 class="service-card__title">Location</h3>
+              <div class="service-card__footer">
+                <a href="#" class="service-card__link">Details</a>
+              </div>
+            </li>
+            <li class="service-card">
+              <i
+                class="fas fa-laptop-code fa-4x service-card__icon"
+                aria-hidden="true"
+              ></i>
+              <h3 class="service-card__title">Coding</h3>
+              <div class="service-card__footer">
+                <a href="#" class="service-card__link">Details</a>
+              </div>
+            </li>
+            <li class="service-card">
+              <i
+                class="fas fa-palette fa-4x service-card__icon"
+                aria-hidden="true"
+              ></i>
+              <h3 class="service-card__title">Design</h3>
+              <div class="service-card__footer">
+                <a href="#" class="service-card__link">Details</a>
+              </div>
+            </li>
+            <li class="service-card">
+              <i
+                class="fas fa-bullhorn fa-4x service-card__icon"
+                aria-hidden="true"
+              ></i>
+              <h3 class="service-card__title">Marketing</h3>
+              <div class="service-card__footer">
+                <a href="#" class="service-card__link">Details</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /SERVICES ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+      <section
+        class="our-skills section"
+        id="our-skills"
+        aria-labelledby="skills-title"
+      >
+        <h2 class="section__title" id="skills-title">Our Skills</h2>
+        <div class="container">
+          <img
+            class="our-skills__image"
+            src="images/skills/skills.png"
+            alt=""
+            aria-hidden="true"
+            width="400"
+            height="400"
+            loading="lazy"
+          />
+          <div class="our-skills__list" role="list">
+            <div class="skill-bar" role="listitem">
+              <h3 class="skill-bar__label">
+                HTML <span class="skill-bar__percent">80%</span>
+              </h3>
+              <div
+                class="skill-bar__track"
+                role="progressbar"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="HTML skill level 80%"
+              >
+                <span
+                  class="skill-bar__fill"
+                  style="width: 0"
+                  data-width="80%"
+                ></span>
+              </div>
             </div>
-            <ul>
-              <li><a href="#">How To Create Sub Domain</a><span>05:18</span></li>
-              <li><a href="#">Playing With The DNS</a><span>03:18</span></li>
-              <li><a href="#">Everything About The Virtual Hosts</a><span>05:25</span></li>
-              <li><a href="#">How To Monitor Your Website</a><span>04:16</span></li>
-              <li><a href="#">Uncharted Beating The Last Boss</a><span>07:48</span></li>
-              <li><a href="#">Ys Oath In Felghana Overview</a><span>03:12</span></li>
-              <li><a href="#">Ys Series All Games Ending</a><span>08:10</span></li>
+
+            <div class="skill-bar" role="listitem">
+              <h3 class="skill-bar__label">
+                CSS <span class="skill-bar__percent">85%</span>
+              </h3>
+              <div
+                class="skill-bar__track"
+                role="progressbar"
+                aria-valuenow="85"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="CSS skill level 85%"
+              >
+                <span
+                  class="skill-bar__fill"
+                  style="width: 0"
+                  data-width="85%"
+                ></span>
+              </div>
+            </div>
+
+            <div class="skill-bar" role="listitem">
+              <h3 class="skill-bar__label">
+                JavaScript <span class="skill-bar__percent">70%</span>
+              </h3>
+              <div
+                class="skill-bar__track"
+                role="progressbar"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="JavaScript skill level 70%"
+              >
+                <span
+                  class="skill-bar__fill"
+                  style="width: 0"
+                  data-width="70%"
+                ></span>
+              </div>
+            </div>
+
+            <div class="skill-bar" role="listitem">
+              <h3 class="skill-bar__label">
+                Python <span class="skill-bar__percent">80%</span>
+              </h3>
+              <div
+                class="skill-bar__track"
+                role="progressbar"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Python skill level 80%"
+              >
+                <span
+                  class="skill-bar__fill"
+                  style="width: 0"
+                  data-width="80%"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /SKILLS ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+      <section
+        class="work-steps section section--alt"
+        id="work-steps"
+        aria-labelledby="work-title"
+      >
+        <h2 class="section__title" id="work-title">How It Works?</h2>
+        <div class="container">
+          <img
+            class="work-steps__image"
+            src="images/works/work-steps.png"
+            alt="Work process illustration"
+            width="400"
+            height="500"
+            loading="lazy"
+          />
+          <div class="work-steps__list">
+            <div class="work-step">
+              <img
+                class="work-step__icon"
+                src="images/works/work-steps-1.png"
+                alt=""
+                aria-hidden="true"
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <div class="work-step__text">
+                <h3 class="work-step__title">Business Analysis</h3>
+                <p class="work-step__desc">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  nesciunt obcaecati quisquam quis laborum recusandae debitis
+                  vel
+                </p>
+              </div>
+            </div>
+
+            <div class="work-step">
+              <img
+                class="work-step__icon"
+                src="images/works/work-steps-2.png"
+                alt=""
+                aria-hidden="true"
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <div class="work-step__text">
+                <h3 class="work-step__title">Architecture</h3>
+                <p class="work-step__desc">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  nesciunt obcaecati quisquam quis laborum recusandae debitis
+                  vel
+                </p>
+              </div>
+            </div>
+
+            <div class="work-step">
+              <img
+                class="work-step__icon"
+                src="images/works/work-steps-3.png"
+                alt=""
+                aria-hidden="true"
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <div class="work-step__text">
+                <h3 class="work-step__title">Development</h3>
+                <p class="work-step__desc">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  nesciunt obcaecati quisquam quis laborum recusandae debitis
+                  vel
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /HOW IT WORKS ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ EVENTS ═══════════════════════════ -->
+      <section
+        class="events section"
+        id="events"
+        aria-labelledby="events-title"
+      >
+        <h2 class="section__title" id="events-title">Latest Events</h2>
+        <div class="container">
+          <img
+            class="events__image"
+            src="images/events/events.png"
+            alt="Events illustration"
+            width="450"
+            height="350"
+            loading="lazy"
+          />
+
+          <div class="events__info">
+            <div class="countdown" aria-label="Countdown to event">
+              <div class="countdown__unit">
+                <span class="countdown__value countdown__value--days">0</span>
+                <span class="countdown__label">Day</span>
+              </div>
+              <div class="countdown__unit">
+                <span class="countdown__value countdown__value--hours">0</span>
+                <span class="countdown__label">Hours</span>
+              </div>
+              <div class="countdown__unit">
+                <span class="countdown__value countdown__value--minutes"
+                  >0</span
+                >
+                <span class="countdown__label">Minutes</span>
+              </div>
+              <div class="countdown__unit">
+                <span class="countdown__value countdown__value--seconds"
+                  >0</span
+                >
+                <span class="countdown__label">Seconds</span>
+              </div>
+            </div>
+            <h3 class="events__name">Tech Masters Event 2028</h3>
+            <p class="events__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero
+              tenetur doloremque iusto ut adipisci quam ratione aliquam
+              excepturi nulla in harum, veritatis porro
+            </p>
+          </div>
+
+          <div class="events__subscribe">
+            <form class="events__form" action="" novalidate>
+              <label for="subscribe-email" class="sr-only">Email address</label>
+              <input
+                id="subscribe-email"
+                class="events__input"
+                type="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+              <button class="events__submit" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /EVENTS ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ PRICING ═══════════════════════════ -->
+      <section
+        class="pricing section section--alt"
+        id="pricing"
+        aria-labelledby="pricing-title"
+      >
+        <h2 class="section__title" id="pricing-title">Pricing Plans</h2>
+        <div class="container">
+          <article class="pricing-card">
+            <div class="pricing-card__head">
+              <h3 class="pricing-card__name">Basic</h3>
+              <img
+                class="pricing-card__icon"
+                src="images/pricing/hosting/hosting-basic.png"
+                alt=""
+                aria-hidden="true"
+                width="80"
+                height="80"
+                loading="lazy"
+              />
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount">$15</span>
+                <span class="pricing-card__period">Per Month</span>
+              </div>
+            </div>
+            <ul class="pricing-card__features" role="list">
+              <li>10GB HDD Space</li>
+              <li>5 Email Addresses</li>
+              <li>2 Subdomains</li>
+              <li>4 Databases</li>
+              <li>Basic Support</li>
             </ul>
-          </div>
-          <div class="box">
-            <img src="image/video-preview.jpg" alt="">
-            <div class="info">Everything About The Virtual Hosts</div>
-          </div>
-        </div>
-       
-      </div>
-    </div>
-    <!-- end video -->
-    <!-- start stats -->
-    <div class="stats" id="stats">
-      <h2>Our Awesome Stats</h2>
-      <div class="container">
-        <div class="box">
-          <i class="far fa-user fa-2x fa-fw"></i>
-          <span class="number" data-goal="150">0</span>
-          <span class="name">Clients</span>
-        </div>
-        <div class="box">
-          <i class="fas fa-code fa-2x fa-fw"></i>
-          <span class="number" data-goal="135">0</span>
-          <span class="name">Projects</span>
-        </div>
-        <div class="box">
-          <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-          <span class="number" data-goal="50">0</span>
-          <span class="name">Countries</span>
-        </div>
-        <div class="box">
-          <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-          <span class="number" data-goal="500">0</span>
-          <span class="name">Money</span>
-        </div>
-      </div>
-    </div>
-    <!-- end stats -->
-    <!-- start discount -->
-    <div class="discount" id="discount">
-     <div class="image">
-      <div class="content">
-        <h2>We Have A Discount</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi asperiores consectetur, recusandae ratione provident necessitatibus, cumque delectus commodi fuga praesentium beatae. 
-          Totam vel similique laborum dicta aperiam odit doloribus corporis.</p>
-          <img src="image/discount.png" alt="">
-      </div>
-     </div>
-       <div class="form">
-        <div class="content">
-          <h2>Request A Discount</h2>
-          <form action="">
-            <input class="input" type="text" placeholder="Your Name">
-            <input class="input" type="email" placeholder="Your Email">
-            <input class="input" type="tel" placeholder="Your Phone">
-            <textarea class="input" placeholder="Tell Us About Your Needs"></textarea>
-            <input type="submit" value="send">
-          </form>
-        </div>
-       </div>
- 
-    </div>
-    <!-- end discount -->
-    <!-- start footer -->
-    <div class="footer" >
-      <div class="container">
-        <div class="box">
-          <h3>ahmed</h3>
-            <ul class="social"> 
-              <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+            <a class="pricing-card__cta" href="#">Choose Plan</a>
+          </article>
+
+          <article class="pricing-card pricing-card--popular">
+            <div class="pricing-card__label" aria-label="Most popular plan">
+              Most Popular
+            </div>
+            <div class="pricing-card__head">
+              <h3 class="pricing-card__name">Advanced</h3>
+              <img
+                class="pricing-card__icon"
+                src="images/pricing/hosting/hosting-advanced.png"
+                alt=""
+                aria-hidden="true"
+                width="80"
+                height="80"
+                loading="lazy"
+              />
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount">$25</span>
+                <span class="pricing-card__period">Per Month</span>
+              </div>
+            </div>
+            <ul class="pricing-card__features" role="list">
+              <li>20GB HDD Space</li>
+              <li>10 Email Addresses</li>
+              <li>5 Subdomains</li>
+              <li>8 Databases</li>
+              <li>Advanced Support</li>
             </ul>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nulla rem, dignissimos iste aspernatur</p>
+            <a class="pricing-card__cta" href="#">Choose Plan</a>
+          </article>
+
+          <article class="pricing-card">
+            <div class="pricing-card__head">
+              <h3 class="pricing-card__name">Professional</h3>
+              <img
+                class="pricing-card__icon"
+                src="images/pricing/hosting/hosting-professional.png"
+                alt=""
+                aria-hidden="true"
+                width="80"
+                height="80"
+                loading="lazy"
+              />
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount">$45</span>
+                <span class="pricing-card__period">Per Month</span>
+              </div>
+            </div>
+            <ul class="pricing-card__features" role="list">
+              <li>50GB HDD Space</li>
+              <li>20 Email Addresses</li>
+              <li>10 Subdomains</li>
+              <li>20 Databases</li>
+              <li>Professional Support</li>
+            </ul>
+            <a class="pricing-card__cta" href="#">Choose Plan</a>
+          </article>
         </div>
-        <div class="box">
-          <ul>
+      </section>
+      <!-- ═══════════════════════════ /PRICING ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ TOP VIDEOS ═══════════════════════════ -->
+      <section
+        class="top-videos section"
+        id="videos"
+        aria-labelledby="videos-title"
+      >
+        <h2 class="section__title" id="videos-title">Top Videos</h2>
+        <div class="container">
+          <div class="top-videos__holder">
+            <div class="top-videos__list-panel">
+              <div class="top-videos__list-header">
+                Top Videos <i class="fas fa-random" aria-hidden="true"></i>
+              </div>
+              <ul class="top-videos__list" role="list">
+                <li class="top-videos__item">
+                  <a href="#">How To Create Sub Domain</a><span>05:18</span>
+                </li>
+                <li class="top-videos__item">
+                  <a href="#">Playing With The DNS</a><span>03:18</span>
+                </li>
+                <li class="top-videos__item">
+                  <a href="#">Everything About The Virtual Hosts</a
+                  ><span>05:25</span>
+                </li>
+                <li class="top-videos__item">
+                  <a href="#">How To Monitor Your Website</a><span>04:16</span>
+                </li>
+                <li class="top-videos__item">
+                  <a href="#">Uncharted Beating The Last Boss</a
+                  ><span>07:48</span>
+                </li>
+                <li class="top-videos__item">
+                  <a href="#">Ys Oath In Felghana Overview</a><span>03:12</span>
+                </li>
+                <li class="top-videos__item">
+                  <a href="#">Ys Series All Games Ending</a><span>08:10</span>
+                </li>
+              </ul>
+            </div>
+            <div class="top-videos__preview">
+              <img
+                class="top-videos__preview-image"
+                src="images/video/video-preview.jpg"
+                alt="Video preview: Everything About The Virtual Hosts"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <div class="top-videos__preview-title">
+                Everything About The Virtual Hosts
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /TOP VIDEOS ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ STATS ═══════════════════════════ -->
+      <section class="stats section" id="stats" aria-labelledby="stats-title">
+        <h2 class="stats__heading" id="stats-title">Our Awesome Stats</h2>
+        <div class="container">
+          <div class="stat-card">
+            <i
+              class="far fa-user fa-2x fa-fw stat-card__icon"
+              aria-hidden="true"
+            ></i>
+            <span class="stat-card__number" data-goal="150">0</span>
+            <span class="stat-card__label">Clients</span>
+          </div>
+          <div class="stat-card">
+            <i
+              class="fas fa-code fa-2x fa-fw stat-card__icon"
+              aria-hidden="true"
+            ></i>
+            <span class="stat-card__number" data-goal="135">0</span>
+            <span class="stat-card__label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <i
+              class="fas fa-globe-asia fa-2x fa-fw stat-card__icon"
+              aria-hidden="true"
+            ></i>
+            <span class="stat-card__number" data-goal="50">0</span>
+            <span class="stat-card__label">Countries</span>
+          </div>
+          <div class="stat-card">
+            <i
+              class="far fa-money-bill-alt fa-2x fa-fw stat-card__icon"
+              aria-hidden="true"
+            ></i>
+            <span class="stat-card__number" data-goal="500">0</span>
+            <span class="stat-card__label">Money</span>
+          </div>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /STATS ═══════════════════════════ -->
+
+      <!-- ═══════════════════════════ DISCOUNT ═══════════════════════════ -->
+      <section class="discount" id="discount" aria-labelledby="discount-title">
+        <div class="discount__image">
+          <div class="discount__content">
+            <h2 class="discount__heading" id="discount-title">
+              We Have A Discount
+            </h2>
+            <p class="discount__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Excepturi asperiores consectetur, recusandae ratione provident
+              necessitatibus, cumque delectus commodi fuga praesentium beatae.
+              Totam vel similique laborum dicta aperiam odit doloribus corporis.
+            </p>
+            <img
+              class="discount__visual"
+              src="images/discount/discount.png"
+              alt="Discount illustration"
+              width="300"
+              height="300"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="discount__form-wrap">
+          <div class="discount__content">
+            <h2 class="discount__form-heading">Request A Discount</h2>
+            <form class="discount__form" action="" novalidate>
+              <label for="d-name" class="sr-only">Your Name</label>
+              <input
+                id="d-name"
+                class="discount__input"
+                type="text"
+                placeholder="Your Name"
+                autocomplete="name"
+                required
+              />
+
+              <label for="d-email" class="sr-only">Your Email</label>
+              <input
+                id="d-email"
+                class="discount__input"
+                type="email"
+                placeholder="Your Email"
+                autocomplete="email"
+                required
+              />
+
+              <label for="d-phone" class="sr-only">Your Phone</label>
+              <input
+                id="d-phone"
+                class="discount__input"
+                type="tel"
+                placeholder="Your Phone"
+                autocomplete="tel"
+              />
+
+              <label for="d-message" class="sr-only">Your Needs</label>
+              <textarea
+                id="d-message"
+                class="discount__input discount__textarea"
+                placeholder="Tell Us About Your Needs"
+              ></textarea>
+
+              <button class="discount__submit" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- ═══════════════════════════ /DISCOUNT ═══════════════════════════ -->
+    </main>
+
+    <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+      <div class="container">
+        <div class="site-footer__brand">
+          <h2 class="site-footer__logo">Ahmed</h2>
+          <ul class="site-footer__social" role="list">
+            <li>
+              <a
+                href="#"
+                class="site-footer__social-link site-footer__social-link--facebook"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="site-footer__social-link site-footer__social-link--twitter"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="site-footer__social-link site-footer__social-link--youtube"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+          <p class="site-footer__tagline">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+            nulla rem, dignissimos iste aspernatur
+          </p>
+        </div>
+
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <ul role="list">
             <li><a href="#">Important Link 1</a></li>
             <li><a href="#">Important Link 2</a></li>
             <li><a href="#">Important Link 3</a></li>
             <li><a href="#">Important Link 4</a></li>
             <li><a href="#">Important Link 5</a></li>
           </ul>
-        </div>
-        <div class="box">
-          <div class="line">
-            <i class="fas fa-map-marker-alt fa-fw"></i>
-            <div class="info">
-              Egypt, Giza, Inside The Sphinx, Room Number 220
+        </nav>
+
+        <address class="site-footer__contact">
+          <div class="site-footer__contact-line">
+            <i class="fas fa-map-marker-alt fa-fw" aria-hidden="true"></i>
+            <span>Egypt, Giza, Inside The Sphinx, Room Number 220</span>
+          </div>
+          <div class="site-footer__contact-line">
+            <i class="far fa-clock fa-fw" aria-hidden="true"></i>
+            <span>Business Hours: From 10:00 To 18:00</span>
+          </div>
+          <div class="site-footer__contact-line">
+            <i class="fas fa-phone-volume fa-fw" aria-hidden="true"></i>
+            <div>
+              <a href="tel:+20123456789">+20123456789</a>
+              <a href="tel:+20198765432">+20198765432</a>
             </div>
           </div>
-          <div class="line">
-            <i class="far fa-clock fa-fw"></i>
-            <div class="info">
-                Business Hours: From 10:00 To 18:00
-            </div>
-          </div>
-          <div class="line">
-            <i class="fas fa-phone-volume fa-fw"></i>
-            <div class="info">
-              <span>+20123456789</span>
-             <span>+20198765432/span>
-            </div>
-          </div>
-        </div>
-        <div class="box">
-          <img src="image/gallery-01.png" alt="">
-          <img src="image/gallery-02.png" alt="">
-          <img src="image/gallery-03.jpg" alt="">
-          <img src="image/gallery-04.png" alt="">
-          <img src="image/gallery-05.jpg" alt="">
-          <img src="image/gallery-06.png" alt="">
-        
+        </address>
+
+        <div
+          class="site-footer__gallery"
+          aria-label="Footer gallery thumbnails"
+        >
+          <img
+            src="images/gallerys/gallery-laptop-1.png"
+            alt="Gallery thumbnail 1"
+            width="74"
+            height="74"
+            loading="lazy"
+          />
+          <img
+            src="images/gallerys/gallery-website-2.png"
+            alt="Gallery thumbnail 2"
+            width="74"
+            height="74"
+            loading="lazy"
+          />
+          <img
+            src="images/gallerys/gallery-work-3.jpg"
+            alt="Gallery thumbnail 3"
+            width="74"
+            height="74"
+            loading="lazy"
+          />
+          <img
+            src="images/gallerys/gallery-website-4.png"
+            alt="Gallery thumbnail 4"
+            width="74"
+            height="74"
+            loading="lazy"
+          />
+          <img
+            src="images/gallerys/gallery-communtiy-5.jpg"
+            alt="Gallery thumbnail 5"
+            width="74"
+            height="74"
+            loading="lazy"
+          />
+          <img
+            src="images/gallerys/gallery-webdesign-6.png"
+            alt="Gallery thumbnail 6"
+            width="74"
+            height="74"
+            loading="lazy"
+          />
         </div>
       </div>
-      <div class="copy-right">Made With &lt;3 By Ahmed</div>
-    </div>
-    <!-- end footer -->
-</body>
-<script src="main.js"></script>
+      <p class="site-footer__copyright">
+        Made with <span aria-label="love">❤</span> by Ahmed
+      </p>
+    </footer>
+    <!-- ═══════════════════════════ /FOOTER ═══════════════════════════ -->
+
+    <!-- Skip-to-content (accessibility) -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
